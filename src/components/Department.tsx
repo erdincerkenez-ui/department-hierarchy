@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { Department as DepartmentType } from "../utils/search"; 
 import "../styles/Department.scss"; 
 
@@ -19,6 +19,12 @@ const highlightText = (text: string, searchTerm: string) => {
 // Recursive component to render hierarchical departments
 const Department: React.FC<DepartmentProps> = memo(({ id, name, description, subDepartments = [], searchTerm }) => {
   const [isOpen, setIsOpen] = useState(true);
+
+  // If there is a search term, always keep departments open
+  useEffect(() => {
+    setIsOpen(searchTerm.trim().length > 0);
+  }, [searchTerm]);
+
     // Toggle function
     const toggleOpen = () => {
       setIsOpen(!isOpen);
@@ -32,10 +38,7 @@ const Department: React.FC<DepartmentProps> = memo(({ id, name, description, sub
       </div>
       <p>{highlightText(description, searchTerm)}</p>
 
-      
-  
-     
-      
+    
       {/* Ensure subDepartments is correctly typed and pass searchTerm */}
       {isOpen && subDepartments.length > 0 && (
         <div className="sub-departments">
