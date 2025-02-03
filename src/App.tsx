@@ -1,7 +1,11 @@
 import React, { useState, useMemo } from "react";
 import jsonDataRaw from "./data.json";
 import Department from "./components/Department"; // Import recursive component
-import { searchDepartments, sanitizeData, Department as DeptType } from "./utils/search"; // Import search function and type
+import {
+  searchDepartments,
+  sanitizeData,
+  Department as DeptType,
+} from "./utils/search"; // Import search function and type
 import "./styles/App.scss"; // Import SCSS file
 
 const jsonData = sanitizeData(jsonDataRaw); // Ensure data is cleaned
@@ -9,10 +13,11 @@ const jsonData = sanitizeData(jsonDataRaw); // Ensure data is cleaned
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State to store the search term
 
-
-  // Use useMemo to cache search results 
+  // Use useMemo to cache search results
   const filteredDepartments: DeptType[] = useMemo(() => {
-    return searchTerm.trim() === "" ? jsonData : searchDepartments(jsonData, searchTerm);
+    return searchTerm.trim() === ""
+      ? jsonData
+      : searchDepartments(jsonData, searchTerm);
   }, [searchTerm]);
 
   return (
@@ -21,7 +26,7 @@ const App: React.FC = () => {
 
       {/* Search Input Field */}
       <div className="search-container">
-      <span className="search-icon">🔍</span>
+        <span className="search-icon">🔍</span>
         <input
           type="text"
           className="search-input"
@@ -29,16 +34,22 @@ const App: React.FC = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-           {searchTerm && <button className="clear-button" onClick={() => setSearchTerm("")}>X</button>}
+        {searchTerm && (
+          <button className="clear-button" onClick={() => setSearchTerm("")}>
+            X
+          </button>
+        )}
       </div>
 
-       {/* Showing results message */}
+      {/* Showing results message */}
 
-       {searchTerm && <p className="results-text">Showing results for "{searchTerm}"</p>}
+      {searchTerm && (
+        <p className="results-text">Showing results for "{searchTerm}"</p>
+      )}
 
       {filteredDepartments.map((dept) => (
-          <Department key={dept.id} {...dept} searchTerm={searchTerm} />
-        ))}
+        <Department key={dept.id} {...dept} searchTerm={searchTerm} />
+      ))}
     </div>
   );
 };

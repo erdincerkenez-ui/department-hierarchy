@@ -1,328 +1,328 @@
 [
-    {
-      "id": 1,
-      "name": "Corporate Operations",
-      "description": "Oversees all company operations and strategic initiatives",
-      "subDepartments": [
-        {
-          "id": 11,
-          "name": "Human Resources",
-          "description": "Managing workforce and organizational development",
-          "subDepartments": [
-            {
-              "id": 111,
-              "name": "Recruitment & Talent",
-              "description": "Talent acquisition and management",
-              "subDepartments": [
-                {
-                  "id": 1111,
-                  "name": "Technical Recruitment",
-                  "description": "Hiring for engineering and technical positions",
-                  "subDepartments": [
-                    {
-                      "id": 11111,
-                      "name": "Software Engineering Recruitment",
-                      "description": "Specialized in hiring software developers",
-                      "subDepartments": []
-                    },
-                    {
-                      "id": 11112,
-                      "name": "DevOps Recruitment",
-                      "description": "Focused on infrastructure and operations roles",
-                      "subDepartments": []
-                    }
-                  ]
-                },
-                {
-                  "id": 1112,
-                  "name": "Global Recruitment",
-                  "description": "International hiring and relocation",
-                  "subDepartments": [
-                    {
-                      "id": 11121,
-                      "name": "EMEA Recruitment",
-                      "description": "Europe, Middle East, and Africa hiring",
-                      "subDepartments": []
-                    },
-                    {
-                      "id": 11122,
-                      "name": "APAC Recruitment",
-                      "description": "Asia Pacific region hiring",
-                      "subDepartments": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": 112,
-              "name": "Employee Relations",
-              "description": "Managing employee concerns and workplace culture",
-              "subDepartments": [
-                {
-                  "id": 1121,
-                  "name": "Employee Engagement",
-                  "description": "Programs for employee satisfaction and retention",
-                  "subDepartments": []
-                },
-                {
-                  "id": 1122,
-                  "name": "Workplace Culture",
-                  "description": "Cultural initiatives and team building",
-                  "subDepartments": []
-                }
-              ]
-            },
-            {
-              "id": 113,
-              "name": "Learning & Development",
-              "description": "Employee training and skill development",
-              "subDepartments": [
-                {
-                  "id": 1131,
-                  "name": "Technical Training",
-                  "description": "Technical skills development programs",
-                  "subDepartments": []
-                },
-                {
-                  "id": 1132,
-                  "name": "Leadership Development",
-                  "description": "Management and leadership training",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 12,
-          "name": "Finance",
-          "description": "Financial planning and management",
-          "subDepartments": [
-            {
-              "id": 121,
-              "name": "Corporate Finance",
-              "description": "Financial strategy and planning",
-              "subDepartments": [
-                {
-                  "id": 1211,
-                  "name": "Financial Planning",
-                  "description": "Budget planning and forecasting",
-                  "subDepartments": []
-                },
-                {
-                  "id": 1212,
-                  "name": "Treasury",
-                  "description": "Cash and investment management",
-                  "subDepartments": []
-                }
-              ]
-            },
-            {
-              "id": 122,
-              "name": "Accounting Operations",
-              "description": "Day-to-day financial operations",
-              "subDepartments": [
-                {
-                  "id": 1221,
-                  "name": "General Ledger",
-                  "description": "Main accounting records management",
-                  "subDepartments": []
-                },
-                {
-                  "id": 1222,
-                  "name": "Tax Operations",
-                  "description": "Tax planning and compliance",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Technology Division",
-      "description": "Technical operations and development",
-      "subDepartments": [
-        {
-          "id": 21,
-          "name": "Engineering",
-          "description": "Software development and architecture",
-          "subDepartments": [
-            {
-              "id": 211,
-              "name": "Platform Engineering",
-              "description": "Core platform development",
-              "subDepartments": [
-                {
-                  "id": 2111,
-                  "name": "Core Services",
-                  "description": "Fundamental platform services",
-                  "subDepartments": [
-                    {
-                      "id": 21111,
-                      "name": "Authentication",
-                      "description": "Identity and access management",
-                      "subDepartments": []
-                    },
-                    {
-                      "id": 21112,
-                      "name": "API Gateway",
-                      "description": "API management and routing",
-                      "subDepartments": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": 212,
-              "name": "Product Engineering",
-              "description": "Customer-facing product development",
-              "subDepartments": [
-                {
-                  "id": 2121,
-                  "name": "Mobile Development",
-                  "description": "Mobile app development",
-                  "subDepartments": [
-                    {
-                      "id": 21211,
-                      "name": "iOS Development",
-                      "description": "Apple platform development",
-                      "subDepartments": []
-                    },
-                    {
-                      "id": 21212,
-                      "name": "Android Development",
-                      "description": "Android platform development",
-                      "subDepartments": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "Infrastructure",
-          "description": "System and network infrastructure",
-          "subDepartments": [
-            {
-              "id": 221,
-              "name": "Cloud Platform",
-              "description": "Cloud infrastructure management",
-              "subDepartments": [
-                {
-                  "id": 2211,
-                  "name": "Cloud Architecture",
-                  "description": "Cloud system design",
-                  "subDepartments": []
-                },
-                {
-                  "id": 2212,
-                  "name": "Cloud Operations",
-                  "description": "Day-to-day cloud management",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Sales & Marketing",
-      "description": "Revenue generation and brand management",
-      "subDepartments": [
-        {
-          "id": 31,
-          "name": "Global Sales",
-          "description": "Worldwide sales operations",
-          "subDepartments": [
-            {
-              "id": 311,
-              "name": "Enterprise Sales",
-              "description": "Large account management",
-              "subDepartments": [
-                {
-                  "id": 3111,
-                  "name": "EMEA Sales",
-                  "description": "Europe, Middle East, and Africa sales",
-                  "subDepartments": []
-                },
-                {
-                  "id": 3112,
-                  "name": "APAC Sales",
-                  "description": "Asia Pacific region sales",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 32,
-          "name": "Marketing",
-          "description": "Brand and marketing initiatives",
-          "subDepartments": [
-            {
-              "id": 321,
-              "name": "Digital Marketing",
-              "description": "Online marketing campaigns",
-              "subDepartments": [
-                {
-                  "id": 3211,
-                  "name": "Social Media",
-                  "description": "Social platform management",
-                  "subDepartments": []
-                },
-                {
-                  "id": 3212,
-                  "name": "Content Marketing",
-                  "description": "Content strategy and creation",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Research & Development",
-      "description": "Innovation and future technologies",
-      "subDepartments": [
-        {
-          "id": 41,
-          "name": "Innovation Lab",
-          "description": "Emerging technology research",
-          "subDepartments": [
-            {
-              "id": 411,
-              "name": "AI Research",
-              "description": "Artificial Intelligence initiatives",
-              "subDepartments": [
-                {
-                  "id": 4111,
-                  "name": "Machine Learning",
-                  "description": "ML algorithms and models",
-                  "subDepartments": []
-                },
-                {
-                  "id": 4112,
-                  "name": "Natural Language Processing",
-                  "description": "NLP research and development",
-                  "subDepartments": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Corporate Operations",
+    "description": "Oversees all company operations and strategic initiatives",
+    "subDepartments": [
+      {
+        "id": 11,
+        "name": "Human Resources",
+        "description": "Managing workforce and organizational development",
+        "subDepartments": [
+          {
+            "id": 111,
+            "name": "Recruitment & Talent",
+            "description": "Talent acquisition and management",
+            "subDepartments": [
+              {
+                "id": 1111,
+                "name": "Technical Recruitment",
+                "description": "Hiring for engineering and technical positions",
+                "subDepartments": [
+                  {
+                    "id": 11111,
+                    "name": "Software Engineering Recruitment",
+                    "description": "Specialized in hiring software developers",
+                    "subDepartments": []
+                  },
+                  {
+                    "id": 11112,
+                    "name": "DevOps Recruitment",
+                    "description": "Focused on infrastructure and operations roles",
+                    "subDepartments": []
+                  }
+                ]
+              },
+              {
+                "id": 1112,
+                "name": "Global Recruitment",
+                "description": "International hiring and relocation",
+                "subDepartments": [
+                  {
+                    "id": 11121,
+                    "name": "EMEA Recruitment",
+                    "description": "Europe, Middle East, and Africa hiring",
+                    "subDepartments": []
+                  },
+                  {
+                    "id": 11122,
+                    "name": "APAC Recruitment",
+                    "description": "Asia Pacific region hiring",
+                    "subDepartments": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 112,
+            "name": "Employee Relations",
+            "description": "Managing employee concerns and workplace culture",
+            "subDepartments": [
+              {
+                "id": 1121,
+                "name": "Employee Engagement",
+                "description": "Programs for employee satisfaction and retention",
+                "subDepartments": []
+              },
+              {
+                "id": 1122,
+                "name": "Workplace Culture",
+                "description": "Cultural initiatives and team building",
+                "subDepartments": []
+              }
+            ]
+          },
+          {
+            "id": 113,
+            "name": "Learning & Development",
+            "description": "Employee training and skill development",
+            "subDepartments": [
+              {
+                "id": 1131,
+                "name": "Technical Training",
+                "description": "Technical skills development programs",
+                "subDepartments": []
+              },
+              {
+                "id": 1132,
+                "name": "Leadership Development",
+                "description": "Management and leadership training",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Finance",
+        "description": "Financial planning and management",
+        "subDepartments": [
+          {
+            "id": 121,
+            "name": "Corporate Finance",
+            "description": "Financial strategy and planning",
+            "subDepartments": [
+              {
+                "id": 1211,
+                "name": "Financial Planning",
+                "description": "Budget planning and forecasting",
+                "subDepartments": []
+              },
+              {
+                "id": 1212,
+                "name": "Treasury",
+                "description": "Cash and investment management",
+                "subDepartments": []
+              }
+            ]
+          },
+          {
+            "id": 122,
+            "name": "Accounting Operations",
+            "description": "Day-to-day financial operations",
+            "subDepartments": [
+              {
+                "id": 1221,
+                "name": "General Ledger",
+                "description": "Main accounting records management",
+                "subDepartments": []
+              },
+              {
+                "id": 1222,
+                "name": "Tax Operations",
+                "description": "Tax planning and compliance",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Technology Division",
+    "description": "Technical operations and development",
+    "subDepartments": [
+      {
+        "id": 21,
+        "name": "Engineering",
+        "description": "Software development and architecture",
+        "subDepartments": [
+          {
+            "id": 211,
+            "name": "Platform Engineering",
+            "description": "Core platform development",
+            "subDepartments": [
+              {
+                "id": 2111,
+                "name": "Core Services",
+                "description": "Fundamental platform services",
+                "subDepartments": [
+                  {
+                    "id": 21111,
+                    "name": "Authentication",
+                    "description": "Identity and access management",
+                    "subDepartments": []
+                  },
+                  {
+                    "id": 21112,
+                    "name": "API Gateway",
+                    "description": "API management and routing",
+                    "subDepartments": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 212,
+            "name": "Product Engineering",
+            "description": "Customer-facing product development",
+            "subDepartments": [
+              {
+                "id": 2121,
+                "name": "Mobile Development",
+                "description": "Mobile app development",
+                "subDepartments": [
+                  {
+                    "id": 21211,
+                    "name": "iOS Development",
+                    "description": "Apple platform development",
+                    "subDepartments": []
+                  },
+                  {
+                    "id": 21212,
+                    "name": "Android Development",
+                    "description": "Android platform development",
+                    "subDepartments": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Infrastructure",
+        "description": "System and network infrastructure",
+        "subDepartments": [
+          {
+            "id": 221,
+            "name": "Cloud Platform",
+            "description": "Cloud infrastructure management",
+            "subDepartments": [
+              {
+                "id": 2211,
+                "name": "Cloud Architecture",
+                "description": "Cloud system design",
+                "subDepartments": []
+              },
+              {
+                "id": 2212,
+                "name": "Cloud Operations",
+                "description": "Day-to-day cloud management",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sales & Marketing",
+    "description": "Revenue generation and brand management",
+    "subDepartments": [
+      {
+        "id": 31,
+        "name": "Global Sales",
+        "description": "Worldwide sales operations",
+        "subDepartments": [
+          {
+            "id": 311,
+            "name": "Enterprise Sales",
+            "description": "Large account management",
+            "subDepartments": [
+              {
+                "id": 3111,
+                "name": "EMEA Sales",
+                "description": "Europe, Middle East, and Africa sales",
+                "subDepartments": []
+              },
+              {
+                "id": 3112,
+                "name": "APAC Sales",
+                "description": "Asia Pacific region sales",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Marketing",
+        "description": "Brand and marketing initiatives",
+        "subDepartments": [
+          {
+            "id": 321,
+            "name": "Digital Marketing",
+            "description": "Online marketing campaigns",
+            "subDepartments": [
+              {
+                "id": 3211,
+                "name": "Social Media",
+                "description": "Social platform management",
+                "subDepartments": []
+              },
+              {
+                "id": 3212,
+                "name": "Content Marketing",
+                "description": "Content strategy and creation",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Research & Development",
+    "description": "Innovation and future technologies",
+    "subDepartments": [
+      {
+        "id": 41,
+        "name": "Innovation Lab",
+        "description": "Emerging technology research",
+        "subDepartments": [
+          {
+            "id": 411,
+            "name": "AI Research",
+            "description": "Artificial Intelligence initiatives",
+            "subDepartments": [
+              {
+                "id": 4111,
+                "name": "Machine Learning",
+                "description": "ML algorithms and models",
+                "subDepartments": []
+              },
+              {
+                "id": 4112,
+                "name": "Natural Language Processing",
+                "description": "NLP research and development",
+                "subDepartments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
