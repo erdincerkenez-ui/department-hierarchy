@@ -22,7 +22,7 @@ const Department: React.FC<DepartmentProps> = memo(({ id, name, description, sub
 
   // If there is a search term, always keep departments open
   useEffect(() => {
-    setIsOpen(searchTerm.trim().length > 0);
+    setIsOpen(true);
   }, [searchTerm]);
 
     // Toggle function
