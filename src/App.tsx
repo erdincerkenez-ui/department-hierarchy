@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from "react";
-import jsonData from "./data.json";
+import jsonDataRaw from "./data.json";
 import Department from "./components/Department"; // Import recursive component
-import { searchDepartments, Department as DeptType } from "./utils/search"; // Import search function and type
+import { searchDepartments, sanitizeData, Department as DeptType } from "./utils/search"; // Import search function and type
 import "./styles/App.scss"; // Import SCSS file
+
+const jsonData = sanitizeData(jsonDataRaw); // Ensure data is cleaned
 
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State to store the search term
@@ -10,7 +12,7 @@ const App: React.FC = () => {
 
   // Use useMemo to cache search results 
   const filteredDepartments: DeptType[] = useMemo(() => {
-    return searchDepartments(jsonData, searchTerm);
+    return searchTerm.trim() === "" ? jsonData : searchDepartments(jsonData, searchTerm);
   }, [searchTerm]);
 
   return (
@@ -26,6 +28,7 @@ const App: React.FC = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+           {searchTerm && <button className="clear-button" onClick={() => setSearchTerm("")}>X</button>}
       </div>
 
       {/* Show "No results found" if there are no matches */}

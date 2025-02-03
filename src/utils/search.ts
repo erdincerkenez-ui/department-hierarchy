@@ -5,6 +5,20 @@ export interface Department {
     description: string;
     subDepartments?: Department[];
   }
+
+
+// Function to validate and sanitize JSON data
+export const sanitizeData = (departments: any[]): Department[] => {
+  return departments
+    .filter((dept) => dept && typeof dept.id === "number" && typeof dept.name === "string")
+    .map((dept) => ({
+      id: dept.id,
+      name: dept.name || "Unnamed Department",
+      description: dept.description || "No description available",
+      subDepartments: Array.isArray(dept.subDepartments) ? sanitizeData(dept.subDepartments) : [],
+    }));
+
+};
   
   // Recursive Search Function
   export const searchDepartments = (departments: Department[], searchTerm: string): Department[] => {
