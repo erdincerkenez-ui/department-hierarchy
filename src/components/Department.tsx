@@ -20,17 +20,18 @@ const highlightText = (text: string, searchTerm: string) => {
 const Department: React.FC<DepartmentProps> = memo(({ id, name, description, subDepartments = [], searchTerm }) => {
   const [isOpen, setIsOpen] = useState(true);
 
-  // If there is a search term, always keep departments open
-  useEffect(() => {
-    setIsOpen(true);
-  }, [searchTerm]);
+  // Check if the department matches the search
+  const matchesSearch = searchTerm && (
+    name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
     // Toggle function
     const toggleOpen = () => {
       setIsOpen(!isOpen);
     };
   return (
-    <div className="department">
+    <div className={`department ${matchesSearch ? "highlighted" : ""}`}>
        <div className="department-header" onClick={toggleOpen}>
         {/* Arrow icon */}
         <span className={`arrow ${isOpen ? "open" : "closed"}`}>▶</span>

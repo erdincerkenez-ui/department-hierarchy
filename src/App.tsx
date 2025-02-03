@@ -33,7 +33,7 @@ const App: React.FC = () => {
 
       {/* Show "No results found" if there are no matches */}
       {filteredDepartments.length === 0 ? (
-        <p className="no-results">Sonuç Bulunumadı</p>
+        <p className="no-results">No results found</p>
       ) : (
         filteredDepartments.map((dept) => (
           <Department key={dept.id} {...dept} searchTerm={searchTerm} />
