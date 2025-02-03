@@ -31,14 +31,13 @@ const App: React.FC = () => {
            {searchTerm && <button className="clear-button" onClick={() => setSearchTerm("")}>X</button>}
       </div>
 
-      {/* Show "No results found" if there are no matches */}
-      {filteredDepartments.length === 0 ? (
-        <p className="no-results">No results found</p>
-      ) : (
-        filteredDepartments.map((dept) => (
+       {/* Showing results message */}
+
+       {searchTerm && <p className="results-text">Showing results for "{searchTerm}"</p>}
+
+      {filteredDepartments.map((dept) => (
           <Department key={dept.id} {...dept} searchTerm={searchTerm} />
-        ))
-      )}
+        ))}
     </div>
   );
 };
