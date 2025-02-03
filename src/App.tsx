@@ -21,6 +21,7 @@ const App: React.FC = () => {
 
       {/* Search Input Field */}
       <div className="search-container">
+      <span className="search-icon">🔍</span>
         <input
           type="text"
           className="search-input"

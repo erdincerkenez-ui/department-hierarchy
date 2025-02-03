@@ -26,6 +26,21 @@ const Department: React.FC<DepartmentProps> = memo(({ id, name, description, sub
     description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const hasMatchingSubDepartments =
+   subDepartments.length > 0 &&
+   subDepartments.some(
+    (sub) =>
+      sub.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      sub.description.toLowerCase().includes(searchTerm.toLowerCase())
+   );
+
+    // Automatically open the department if it matches the search or any of its sub-departments match
+    useEffect(() => {
+      if (searchTerm.trim() !== "") {
+        setIsOpen(matchesSearch || hasMatchingSubDepartments);
+      }
+    }, [searchTerm, matchesSearch, hasMatchingSubDepartments]);
+
     // Toggle function
     const toggleOpen = () => {
       setIsOpen(!isOpen);
