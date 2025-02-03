@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import jsonData from "./data.json";
 import Department from "./components/Department"; // Import recursive component
 import { searchDepartments, Department as DeptType } from "./utils/search"; // Import search function and type
@@ -7,8 +7,11 @@ import "./styles/App.scss"; // Import SCSS file
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State to store the search term
 
-  // Use the recursive search function to filter departments dynamically
-  const filteredDepartments: DeptType[] = searchDepartments(jsonData, searchTerm);
+
+  // Use useMemo to cache search results 
+  const filteredDepartments: DeptType[] = useMemo(() => {
+    return searchDepartments(jsonData, searchTerm);
+  }, [searchTerm]);
 
   return (
     <div>

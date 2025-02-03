@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { Department as DepartmentType } from "../utils/search"; 
 import "../styles/Department.scss"; 
 
@@ -17,7 +17,7 @@ const highlightText = (text: string, searchTerm: string) => {
 };
 
 // Recursive component to render hierarchical departments
-const Department: React.FC<DepartmentProps> = ({ id, name, description, subDepartments = [], searchTerm }) => {
+const Department: React.FC<DepartmentProps> = memo(({ id, name, description, subDepartments = [], searchTerm }) => {
   const [isOpen, setIsOpen] = useState(true);
     // Toggle function
     const toggleOpen = () => {
@@ -38,7 +38,7 @@ const Department: React.FC<DepartmentProps> = ({ id, name, description, subDepar
       
       {/* Ensure subDepartments is correctly typed and pass searchTerm */}
       {isOpen && subDepartments.length > 0 && (
-        <div>
+        <div className="sub-departments">
           {subDepartments.map((sub) => (
             <Department key={sub.id} {...sub} searchTerm={searchTerm} />
           ))}
@@ -46,6 +46,6 @@ const Department: React.FC<DepartmentProps> = ({ id, name, description, subDepar
       )}
     </div>
   );
-};
+});
 
 export default Department;
