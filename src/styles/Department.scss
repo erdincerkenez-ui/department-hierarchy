@@ -1,9 +1,9 @@
-// Department styling to match UI
+// Department component styling
 .department {
   margin-left: 20px;
   padding: 15px;
   border-left: 3px solid #444;
-  background-color: #222; // Default dark gray background
+  background-color: #222;
   border-radius: 5px;
   margin-bottom: 8px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -13,10 +13,23 @@
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
   }
 
-  h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #ddd;
+  // Department header with proper alignment
+  .department-header {
+    display: flex;
+    align-items: center; // Ensure arrow and title are aligned
+    cursor: pointer;
+
+    .arrow {
+      font-size: 14px;
+      margin-right: 10px; // Space between arrow and title
+      transition: transform 0.3s ease-in-out;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ddd;
+    }
   }
 
   p {
@@ -35,14 +48,13 @@
 
 // Highlighted search results
 .highlighted {
-  background-color: #333 !important; // Lighter gray when searched
+  background-color: #333 !important;
 }
 
-// Highlight search term in yellow
-mark {
-  background-color: yellow;
-  font-weight: bold;
-  color: black;
-  padding: 2px 4px;
-  border-radius: 3px;
+// Rotate arrow on open
+.arrow.open {
+  transform: rotate(90deg);
+}
+.arrow.closed {
+  transform: rotate(0deg);
 }
