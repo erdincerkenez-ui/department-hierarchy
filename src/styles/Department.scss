@@ -1,23 +1,57 @@
+// Department component styling
 .department {
-    margin-left: 20px;
-    padding: 10px;
-    border-left: 3px solid #007bff;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f1f5ff;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   }
-  
-  .department h3 {
-    margin: 0;
-  }
-  
-  .department p {
-    margin: 5px 0;
-  }
-  
-  mark {
-    background-color: yellow;
+
+  // Department header (for toggle functionality)
+  .department-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
     font-weight: bold;
+    color: #0056b3;
+
+    h3 {
+      margin-left: 10px;
+    }
   }
-  
+
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  // Arrow icon styles
+  .arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .arrow.open {
+    transform: rotate(90deg);
+  }
+
+  .arrow.closed {
+    transform: rotate(0deg);
+  }
+
+  // Sub-departments indentation
+  .sub-departments {
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px dashed #007bff;
+  }
+}

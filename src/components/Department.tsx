@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Department as DepartmentType } from "../utils/search"; 
 import "../styles/Department.scss"; 
 
@@ -18,13 +18,26 @@ const highlightText = (text: string, searchTerm: string) => {
 
 // Recursive component to render hierarchical departments
 const Department: React.FC<DepartmentProps> = ({ id, name, description, subDepartments = [], searchTerm }) => {
+  const [isOpen, setIsOpen] = useState(true);
+    // Toggle function
+    const toggleOpen = () => {
+      setIsOpen(!isOpen);
+    };
   return (
     <div className="department">
-      <h3>{highlightText(name, searchTerm)}</h3>
+       <div className="department-header" onClick={toggleOpen}>
+        {/* Arrow icon */}
+        <span className={`arrow ${isOpen ? "open" : "closed"}`}>▶</span>
+        <h3>{highlightText(name, searchTerm)}</h3>
+      </div>
       <p>{highlightText(description, searchTerm)}</p>
+
+      
+  
+     
       
       {/* Ensure subDepartments is correctly typed and pass searchTerm */}
-      {subDepartments.length > 0 && (
+      {isOpen && subDepartments.length > 0 && (
         <div>
           {subDepartments.map((sub) => (
             <Department key={sub.id} {...sub} searchTerm={searchTerm} />
